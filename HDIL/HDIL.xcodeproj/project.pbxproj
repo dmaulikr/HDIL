@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */; };
+		D8D110801CF78C6800FDA226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D1107E1CF78C6800FDA226 /* Main.storyboard */; };
+		D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */; };
+		D8D110851CF78C6800FDA226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D110841CF78C6800FDA226 /* Assets.xcassets */; };
+		D8D110881CF78C6800FDA226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D110861CF78C6800FDA226 /* LaunchScreen.storyboard */; };
+		D8D110931CF78CEF00FDA226 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D110921CF78CEF00FDA226 /* HomeVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D8D110771CF78C6800FDA226 /* HDIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8D1107F1CF78C6800FDA226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8D110821CF78C6800FDA226 /* HDIL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HDIL.xcdatamodel; sourceTree = "<group>"; };
+		D8D110841CF78C6800FDA226 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8D110871CF78C6800FDA226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8D110891CF78C6800FDA226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D110921CF78CEF00FDA226 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8D110741CF78C6800FDA226 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8D1106E1CF78C6800FDA226 = {
+			isa = PBXGroup;
+			children = (
+				D8D110791CF78C6800FDA226 /* HDIL */,
+				D8D110781CF78C6800FDA226 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8D110781CF78C6800FDA226 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8D110771CF78C6800FDA226 /* HDIL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8D110791CF78C6800FDA226 /* HDIL */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */,
+				D8D110911CF78C8500FDA226 /* Controller */,
+				D8D110901CF78C7F00FDA226 /* View */,
+				D8D1108F1CF78C7900FDA226 /* Model */,
+				D8D110841CF78C6800FDA226 /* Assets.xcassets */,
+				D8D110891CF78C6800FDA226 /* Info.plist */,
+				D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */,
+			);
+			path = HDIL;
+			sourceTree = "<group>";
+		};
+		D8D1108F1CF78C7900FDA226 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D8D110901CF78C7F00FDA226 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8D110861CF78C6800FDA226 /* LaunchScreen.storyboard */,
+				D8D1107E1CF78C6800FDA226 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D8D110911CF78C8500FDA226 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8D110921CF78CEF00FDA226 /* HomeVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8D110761CF78C6800FDA226 /* HDIL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8D1108C1CF78C6800FDA226 /* Build configuration list for PBXNativeTarget "HDIL" */;
+			buildPhases = (
+				D8D110731CF78C6800FDA226 /* Sources */,
+				D8D110741CF78C6800FDA226 /* Frameworks */,
+				D8D110751CF78C6800FDA226 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HDIL;
+			productName = HDIL;
+			productReference = D8D110771CF78C6800FDA226 /* HDIL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8D1106F1CF78C6800FDA226 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Ricky;
+				TargetAttributes = {
+					D8D110761CF78C6800FDA226 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D8D110721CF78C6800FDA226 /* Build configuration list for PBXProject "HDIL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8D1106E1CF78C6800FDA226;
+			productRefGroup = D8D110781CF78C6800FDA226 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8D110761CF78C6800FDA226 /* HDIL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8D110751CF78C6800FDA226 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D110881CF78C6800FDA226 /* LaunchScreen.storyboard in Resources */,
+				D8D110851CF78C6800FDA226 /* Assets.xcassets in Resources */,
+				D8D110801CF78C6800FDA226 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8D110731CF78C6800FDA226 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D110931CF78CEF00FDA226 /* HomeVC.swift in Sources */,
+				D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */,
+				D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D8D1107E1CF78C6800FDA226 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8D1107F1CF78C6800FDA226 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8D110861CF78C6800FDA226 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8D110871CF78C6800FDA226 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8D1108A1CF78C6800FDA226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8D1108B1CF78C6800FDA226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8D1108D1CF78C6800FDA226 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HDIL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyvelasquez.HDIL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8D1108E1CF78C6800FDA226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HDIL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rickyvelasquez.HDIL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8D110721CF78C6800FDA226 /* Build configuration list for PBXProject "HDIL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D1108A1CF78C6800FDA226 /* Debug */,
+				D8D1108B1CF78C6800FDA226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8D1108C1CF78C6800FDA226 /* Build configuration list for PBXNativeTarget "HDIL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D1108D1CF78C6800FDA226 /* Debug */,
+				D8D1108E1CF78C6800FDA226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8D110821CF78C6800FDA226 /* HDIL.xcdatamodel */,
+			);
+			currentVersion = D8D110821CF78C6800FDA226 /* HDIL.xcdatamodel */;
+			path = HDIL.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D8D1106F1CF78C6800FDA226 /* Project object */;
+}
