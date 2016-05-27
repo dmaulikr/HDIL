@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--HDIL-->
+        <!--How Do I Look?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="HDIL" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,12 +16,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-yr-wYd">
+                                <rect key="frame" x="100" y="68" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="rIB-Sm-aqM"/>
+                                    <constraint firstAttribute="height" constant="400" id="sbC-6d-euC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S80-Ap-e6o">
+                                <rect key="frame" x="166" y="523" width="268" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="2X7-CM-SWD"/>
+                                    <constraint firstAttribute="height" constant="30" id="l9d-8s-9Db"/>
+                                </constraints>
+                                <state key="normal" title="How do I look?"/>
+                                <connections>
+                                    <action selector="onHDILPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNi-dF-lAM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-IC-lfQ">
+                                <rect key="frame" x="166" y="561" width="268" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="Yz1-JY-I4c"/>
+                                </constraints>
+                                <state key="normal" title="Choose an old picture"/>
+                                <connections>
+                                    <action selector="ChoosePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrA-qV-zhZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rgv-IC-lfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Xy-xh-Gln"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="9" id="cnq-Ik-9zZ"/>
+                            <constraint firstItem="2cp-yr-wYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9d-Xz-hfo"/>
+                            <constraint firstItem="2cp-yr-wYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="lsB-JC-xim"/>
+                            <constraint firstItem="S80-Ap-e6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhP-bl-kk1"/>
+                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="2cp-yr-wYd" secondAttribute="bottom" constant="55" id="pGX-jN-pu3"/>
+                            <constraint firstItem="Rgv-IC-lfQ" firstAttribute="top" secondItem="S80-Ap-e6o" secondAttribute="bottom" constant="8" id="wew-0w-t8X"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="HDIL" id="xfF-ai-JpG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="AvR-Af-Wi6"/>
+                    <navigationItem key="navigationItem" title="How Do I Look?" id="xfF-ai-JpG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="redo" id="AvR-Af-Wi6"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="HDILButton" destination="S80-Ap-e6o" id="k31-W5-Q1p"/>
+                        <outlet property="chooseImageButton" destination="Rgv-IC-lfQ" id="DAc-ox-Vec"/>
+                        <outlet property="imageView" destination="2cp-yr-wYd" id="SBF-FX-sm1"/>
                         <outlet property="refreshButton" destination="AvR-Af-Wi6" id="1tF-ne-YGC"/>
                     </connections>
                 </viewController>
