@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3B4A2A39E2750096586CB24E'
+               BlueprintIdentifier = '14D5AB144065B97D7FAE9220'
                BlueprintName = 'ProjectOxfordFace'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ProjectOxfordFace.framework'>
+               BuildableName = 'libProjectOxfordFace.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

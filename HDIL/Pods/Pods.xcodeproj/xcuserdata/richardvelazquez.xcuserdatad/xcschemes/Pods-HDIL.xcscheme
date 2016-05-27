@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '31B3F057B6443CE242B82D92'
+               BlueprintIdentifier = '0C5FACCE09A0EE5A01660546'
                BlueprintName = 'Pods-HDIL'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_HDIL.framework'>
+               BuildableName = 'libPods-HDIL.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -30,6 +30,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.imagePicker.delegate = self
     self.imagePicker.sourceType = .SavedPhotosAlbum
     self.presentViewController(self.imagePicker, animated: true, completion: nil)
+    
   }
   
   @IBAction func onHDILPressed(sender: UIButton) {
