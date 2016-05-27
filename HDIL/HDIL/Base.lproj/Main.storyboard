@@ -45,6 +45,9 @@
                                     <action selector="ChoosePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrA-qV-zhZ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ah-k8b">
+                                <rect key="frame" x="290" y="258" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,6 +65,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="HDILButton" destination="S80-Ap-e6o" id="k31-W5-Q1p"/>
+                        <outlet property="activityIndicator" destination="JIf-ah-k8b" id="OXr-85-dmy"/>
                         <outlet property="chooseImageButton" destination="Rgv-IC-lfQ" id="DAc-ox-Vec"/>
                         <outlet property="imageView" destination="2cp-yr-wYd" id="SBF-FX-sm1"/>
                         <outlet property="refreshButton" destination="AvR-Af-Wi6" id="1tF-ne-YGC"/>

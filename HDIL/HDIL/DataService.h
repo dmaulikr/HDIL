@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ProjectOxfordFace/MPOFaceSDK.h>
 
 @interface DataService : NSObject
--(void)checkingBridge;
++(BOOL)checkingBridge;
++(NSArray *)returnImageAnalysisDataUsingData:(NSData *)data;
+
 @end
