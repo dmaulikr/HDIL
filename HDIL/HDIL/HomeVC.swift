@@ -32,6 +32,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.imagePicker = UIImagePickerController()
     self.imagePicker.delegate = self
     self.imagePicker.sourceType = .SavedPhotosAlbum
+    
     self.presentViewController(self.imagePicker, animated: true, completion: nil)
   }
   
@@ -39,6 +40,8 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
   self.imagePicker = UIImagePickerController()
   self.imagePicker.delegate = self
   self.imagePicker.sourceType = .Camera
+  self.imagePicker.cameraDevice = .Front
+    
   self.presentViewController(self.imagePicker, animated: true, completion: nil)
     
   }
@@ -66,7 +69,7 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.activityIndicator.stopAnimating()
     }
     self.HDILButton.setTitle("Try Again", forState: .Normal)
-    self.chooseImageButton.setTitle("Choose a new picture", forState: .Normal)
+    self.chooseImageButton.setTitle("Choose from Camera Roll", forState: .Normal)
   }
   
   func presentPictureReslts (resultTitle : String, resultDescription : String) {
