@@ -18,24 +18,33 @@ NSString *ProjectOxfordFaceSubscriptionKey = @"7c58808782884bbf9597e5b42841fd96"
   return true;
 }
 
-+(NSArray *)returnImageAnalysisDataUsingData:(NSData *)data {
++(void)returnImageAnalysisDataUsingData:(NSData *)data withBlock:(void (^)(NSString *result))block {
    MPOFaceServiceClient *client = [[MPOFaceServiceClient alloc] initWithSubscriptionKey:ProjectOxfordFaceSubscriptionKey];
   
   [client detectWithData:data returnFaceId:false returnFaceLandmarks:false returnFaceAttributes:@[@(MPOFaceAttributeTypeGender), @(MPOFaceAttributeTypeAge)] completionBlock:^(NSArray<MPOFace *> *collection, NSError *error) {
     if (error) {
-      NSLog(@"%@", error.localizedDescription);
+      block(@"Error");
     } else {
-      for (MPOFace *face in collection) {
-        
-        NSLog(@"%@", face.attributes.gender);
-        NSLog(@"%@", face.attributes.age);
+      
+      if (collection.count >1)
+      {
+        block(@"Too many faces");
+      } else if (collection.count == 1)
+      {
+        NSString *sex;
+        for (MPOFace *face in collection) {
+          sex = [NSString stringWithFormat:@"%@", face.attributes.gender];
+          //NSLog(@"%@", face.attributes.gender);
+          //NSLog(@"%@", face.attributes.age);
+          }
+        block(sex);
+      }else
+      {
+          block(@"No faces");
+        }
       }
-    }
     
   }];
-  
-  return @[@"skjfdb"];
-  
 }
 
 

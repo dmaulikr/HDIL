@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D1897C57356BB664AC0F2B85 /* libPods-HDIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E98BB0539DB3C90A001E591 /* libPods-HDIL.a */; };
 		D8960A951CF89C14004ADAC7 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8960A941CF89C14004ADAC7 /* DataService.m */; };
-		D8960A9C1CF8AFF8004ADAC7 /* Selfie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8960A9B1CF8AFF8004ADAC7 /* Selfie.swift */; };
 		D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */; };
 		D8D110801CF78C6800FDA226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D1107E1CF78C6800FDA226 /* Main.storyboard */; };
 		D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */; };
@@ -25,7 +24,6 @@
 		D8960A921CF89C14004ADAC7 /* HDIL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDIL-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8960A931CF89C14004ADAC7 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
 		D8960A941CF89C14004ADAC7 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
-		D8960A9B1CF8AFF8004ADAC7 /* Selfie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfie.swift; sourceTree = "<group>"; };
 		D8D110771CF78C6800FDA226 /* HDIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D1107F1CF78C6800FDA226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 		D8D1108F1CF78C7900FDA226 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D8960A9B1CF8AFF8004ADAC7 /* Selfie.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D110931CF78CEF00FDA226 /* HomeVC.swift in Sources */,
-				D8960A9C1CF8AFF8004ADAC7 /* Selfie.swift in Sources */,
 				D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */,
 				D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */,
 				D8960A951CF89C14004ADAC7 /* DataService.m in Sources */,

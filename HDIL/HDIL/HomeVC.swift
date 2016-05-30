@@ -51,9 +51,32 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     picker.dismissViewControllerAnimated(true, completion: nil)
     imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
     let data = UIImageJPEGRepresentation((info[UIImagePickerControllerOriginalImage] as? UIImage)!, 0.8)
-    DataService.returnImageAnalysisDataUsingData(data)
+    DataService.returnImageAnalysisDataUsingData(data) { (result) in
+      if result == "male" {
+        self.presentPictureReslts("You need a shave", resultDescription: "Make sure to shave before heading out")
+      } else if result == "female" {
+        self.presentPictureReslts("Let's add some mascara", resultDescription: "Make sure to put on some mascara before heading out")
+      } else if result == "Too many faces" {
+        self.presentPictureReslts("You guys look awesome!", resultDescription: "Now take an individual picture so we can tell you how you look")
+      } else if result == "No faces" {
+        self.presentPictureReslts("Hmm...", resultDescription: "We don't see anyone here. Try again with a different picture")
+      } else {
+        self.presentPictureReslts("Something went wrong", resultDescription: result)
+      }
+    self.activityIndicator.stopAnimating()
+    }
     self.HDILButton.setTitle("Try Again", forState: .Normal)
     self.chooseImageButton.setTitle("Choose a new picture", forState: .Normal)
+  }
+  
+  func presentPictureReslts (resultTitle : String, resultDescription : String) {
+    let alert = UIAlertController(title: resultTitle, message: resultDescription, preferredStyle: .Alert)
+    let gotIT = UIAlertAction(title: "Got It", style: .Cancel) { (action) in
+      self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    alert.addAction(gotIT)
+    self.presentViewController(alert, animated: true) {
+    }
   }
   
   

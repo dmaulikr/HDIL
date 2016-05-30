@@ -45,18 +45,24 @@
                                     <action selector="ChoosePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrA-qV-zhZ"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ah-k8b">
-                                <rect key="frame" x="290" y="258" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ah-k8b">
+                                <rect key="frame" x="290" y="484" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="H1n-8N-vTs"/>
+                                    <constraint firstAttribute="height" constant="20" id="idm-U8-KI8"/>
+                                </constraints>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rgv-IC-lfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Xy-xh-Gln"/>
+                            <constraint firstItem="JIf-ah-k8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NN1-ch-ZNP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="9" id="cnq-Ik-9zZ"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9d-Xz-hfo"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="lsB-JC-xim"/>
                             <constraint firstItem="S80-Ap-e6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhP-bl-kk1"/>
                             <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="2cp-yr-wYd" secondAttribute="bottom" constant="55" id="pGX-jN-pu3"/>
+                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="JIf-ah-k8b" secondAttribute="bottom" constant="19" id="phr-rZ-otu"/>
                             <constraint firstItem="Rgv-IC-lfQ" firstAttribute="top" secondItem="S80-Ap-e6o" secondAttribute="bottom" constant="8" id="wew-0w-t8X"/>
                         </constraints>
                     </view>

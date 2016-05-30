@@ -10,6 +10,6 @@
 
 @interface DataService : NSObject
 +(BOOL)checkingBridge;
-+(NSArray *)returnImageAnalysisDataUsingData:(NSData *)data;
++(void)returnImageAnalysisDataUsingData:(NSData *)data withBlock:(void (^)(NSString *result))block;
 
 @end
