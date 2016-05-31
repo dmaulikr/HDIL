@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--How Do I Look?-->
@@ -19,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-yr-wYd">
-                                <rect key="frame" x="100" y="68" width="400" height="400"/>
+                                <rect key="frame" x="100" y="68" width="400" height="365"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="rIB-Sm-aqM"/>
-                                    <constraint firstAttribute="height" constant="400" id="sbC-6d-euC"/>
+                                    <constraint firstAttribute="height" constant="365" id="sbC-6d-euC"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S80-Ap-e6o">
-                                <rect key="frame" x="166" y="523" width="268" height="30"/>
+                                <rect key="frame" x="166" y="479" width="268" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="2X7-CM-SWD"/>
                                     <constraint firstAttribute="height" constant="30" id="l9d-8s-9Db"/>
@@ -36,8 +35,22 @@
                                     <action selector="onHDILPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNi-dF-lAM"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ah-k8b">
+                                <rect key="frame" x="290" y="441" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="H1n-8N-vTs"/>
+                                    <constraint firstAttribute="height" constant="20" id="idm-U8-KI8"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-th-6aG">
+                                <rect key="frame" x="166" y="555" width="268" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="GhG-V8-sqz"/>
+                                </constraints>
+                                <state key="normal" title="Choose From Previous Images"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-IC-lfQ">
-                                <rect key="frame" x="166" y="561" width="268" height="30"/>
+                                <rect key="frame" x="166" y="517" width="268" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="268" id="Yz1-JY-I4c"/>
                                 </constraints>
@@ -46,46 +59,30 @@
                                     <action selector="ChoosePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrA-qV-zhZ"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ah-k8b">
-                                <rect key="frame" x="290" y="484" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="H1n-8N-vTs"/>
-                                    <constraint firstAttribute="height" constant="20" id="idm-U8-KI8"/>
-                                </constraints>
-                            </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DU8-Jz-rYs">
-                                <rect key="frame" x="0.0" y="474" width="102" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="CYc-fn-QV5"/>
-                                    <constraint firstAttribute="height" constant="128" id="Dob-NU-WCU"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rgv-IC-lfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Xy-xh-Gln"/>
+                            <constraint firstItem="XY5-th-6aG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hfk-GJ-p2g"/>
                             <constraint firstItem="JIf-ah-k8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NN1-ch-ZNP"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="DU8-Jz-rYs" secondAttribute="bottom" constant="-2" id="ZBO-4T-T2o"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="9" id="cnq-Ik-9zZ"/>
+                            <constraint firstItem="XY5-th-6aG" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="8" id="PII-dO-d6C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="53" id="cnq-Ik-9zZ"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9d-Xz-hfo"/>
-                            <constraint firstItem="DU8-Jz-rYs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hDf-Mf-hcK"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="lsB-JC-xim"/>
                             <constraint firstItem="S80-Ap-e6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhP-bl-kk1"/>
-                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="2cp-yr-wYd" secondAttribute="bottom" constant="55" id="pGX-jN-pu3"/>
-                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="JIf-ah-k8b" secondAttribute="bottom" constant="19" id="phr-rZ-otu"/>
+                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="2cp-yr-wYd" secondAttribute="bottom" constant="46" id="pGX-jN-pu3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XY5-th-6aG" secondAttribute="bottom" constant="15" id="pdM-4l-bdf"/>
+                            <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="JIf-ah-k8b" secondAttribute="bottom" constant="18" id="phr-rZ-otu"/>
                             <constraint firstItem="Rgv-IC-lfQ" firstAttribute="top" secondItem="S80-Ap-e6o" secondAttribute="bottom" constant="8" id="wew-0w-t8X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="How Do I Look?" id="xfF-ai-JpG">
-                        <barButtonItem key="rightBarButtonItem" systemItem="redo" id="AvR-Af-Wi6"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="How Do I Look?" id="xfF-ai-JpG"/>
                     <connections>
                         <outlet property="HDILButton" destination="S80-Ap-e6o" id="k31-W5-Q1p"/>
                         <outlet property="activityIndicator" destination="JIf-ah-k8b" id="OXr-85-dmy"/>
+                        <outlet property="chooseFromPreviousImagesButton" destination="XY5-th-6aG" id="jbm-mU-zXN"/>
                         <outlet property="chooseImageButton" destination="Rgv-IC-lfQ" id="DAc-ox-Vec"/>
                         <outlet property="imageView" destination="2cp-yr-wYd" id="SBF-FX-sm1"/>
-                        <outlet property="refreshButton" destination="AvR-Af-Wi6" id="1tF-ne-YGC"/>
-                        <outlet property="testImage" destination="DU8-Jz-rYs" id="xvj-2v-aYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

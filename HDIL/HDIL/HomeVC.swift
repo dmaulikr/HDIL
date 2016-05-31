@@ -13,27 +13,25 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
 
   
   @IBOutlet var HDILButton: UIButton!
-  @IBOutlet var refreshButton: UIBarButtonItem!
   @IBOutlet var imageView: UIImageView!
   
   @IBOutlet var activityIndicator: UIActivityIndicatorView!
   @IBOutlet var chooseImageButton: UIButton!
   
-  @IBOutlet var testImage: UIImageView!
-  
-  
+  @IBOutlet var chooseFromPreviousImagesButton: UIButton!
   var imagePicker : UIImagePickerController!
   var moc : NSManagedObjectContext?
   
   
   
   override func viewDidLoad() {
-    self.refreshButton.enabled = false
-    self.refreshButton.tintColor = UIColor.clearColor()
+  
     self.activityIndicator.hidesWhenStopped = true
     self.activityIndicator.hidden = true
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     self.moc = appDelegate.managedObjectContext;
+    self.chooseFromPreviousImagesButton.hidden = true
+    self.chooseFromPreviousImagesButton.enabled = false
     self.loadImages()
   }
   
@@ -104,7 +102,6 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     } catch {
       fatalError("Failure to save context: \(error)")
     }
-    
     moc?.refreshAllObjects()
   }
   
@@ -113,10 +110,13 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
 
     do {
       let results = try self.moc!.executeFetchRequest(fetchRequest)
+      if results.count > 0 {
+        self.chooseFromPreviousImagesButton.hidden = false
+        self.chooseFromPreviousImagesButton.enabled = true
+      }
       print(results.count)
-      let imageData = results.first!.binary
-      let newImage = UIImage(data: imageData!!)
-      self.testImage.image = newImage
+//      let imageData = results.first!.binary
+//      let newImage = UIImage(data: imageData!!)
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
       return
