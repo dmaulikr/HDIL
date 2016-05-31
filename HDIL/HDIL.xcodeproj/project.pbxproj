@@ -11,6 +11,8 @@
 		D8960A951CF89C14004ADAC7 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8960A941CF89C14004ADAC7 /* DataService.m */; };
 		D8BCB3431CFD2A9100AE8495 /* Picture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB33F1CFD2A9100AE8495 /* Picture+CoreDataProperties.m */; };
 		D8BCB3441CFD2A9100AE8495 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB3411CFD2A9100AE8495 /* Picture.m */; };
+		D8BCB34A1CFD617E00AE8495 /* SavedPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB3491CFD617E00AE8495 /* SavedPictureCell.swift */; };
+		D8BCB34C1CFD627700AE8495 /* SavedPicturesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB34B1CFD627700AE8495 /* SavedPicturesVC.swift */; };
 		D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */; };
 		D8D110801CF78C6800FDA226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D1107E1CF78C6800FDA226 /* Main.storyboard */; };
 		D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */; };
@@ -30,6 +32,8 @@
 		D8BCB33F1CFD2A9100AE8495 /* Picture+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Picture+CoreDataProperties.m"; sourceTree = "<group>"; };
 		D8BCB3401CFD2A9100AE8495 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		D8BCB3411CFD2A9100AE8495 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		D8BCB3491CFD617E00AE8495 /* SavedPictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPictureCell.swift; sourceTree = "<group>"; };
+		D8BCB34B1CFD627700AE8495 /* SavedPicturesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPicturesVC.swift; sourceTree = "<group>"; };
 		D8D110771CF78C6800FDA226 /* HDIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D1107F1CF78C6800FDA226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				D8D110861CF78C6800FDA226 /* LaunchScreen.storyboard */,
 				D8D1107E1CF78C6800FDA226 /* Main.storyboard */,
+				D8BCB3491CFD617E00AE8495 /* SavedPictureCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D110921CF78CEF00FDA226 /* HomeVC.swift */,
+				D8BCB34B1CFD627700AE8495 /* SavedPicturesVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,9 +272,11 @@
 				D8BCB3441CFD2A9100AE8495 /* Picture.m in Sources */,
 				D8D110931CF78CEF00FDA226 /* HomeVC.swift in Sources */,
 				D8BCB3431CFD2A9100AE8495 /* Picture+CoreDataProperties.m in Sources */,
+				D8BCB34C1CFD627700AE8495 /* SavedPicturesVC.swift in Sources */,
 				D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */,
 				D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */,
 				D8960A951CF89C14004ADAC7 /* DataService.m in Sources */,
+				D8BCB34A1CFD617E00AE8495 /* SavedPictureCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

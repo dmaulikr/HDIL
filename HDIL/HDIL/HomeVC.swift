@@ -21,6 +21,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
   @IBOutlet var chooseFromPreviousImagesButton: UIButton!
   var imagePicker : UIImagePickerController!
   var moc : NSManagedObjectContext?
+  var pictures : NSMutableArray?
+  var selectedImage : UIImage?
+  var didSelectImage : Bool?
   
   
   
@@ -33,6 +36,14 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.chooseFromPreviousImagesButton.hidden = true
     self.chooseFromPreviousImagesButton.enabled = false
     self.loadImages()
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    if self.selectedImage != nil && self.didSelectImage == true {
+      self.analyzeImage(self.selectedImage!)
+      self.imageView.image = selectedImage
+      self.didSelectImage = false
+    }
   }
   
  
@@ -58,13 +69,21 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
   
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     
-    self.activityIndicator.hidden = false
-    self.activityIndicator.startAnimating()
     picker.dismissViewControllerAnimated(true, completion: nil)
     let image = info[UIImagePickerControllerOriginalImage] as? UIImage
     imageView.image = image
     self.saveImage(image!)
-    let data = UIImageJPEGRepresentation((info[UIImagePickerControllerOriginalImage] as? UIImage)!, 0.8)
+    self.analyzeImage(image!)
+
+  }
+  
+  func analyzeImage (image : UIImage) {
+    self.activityIndicator.hidden = false
+    self.activityIndicator.startAnimating()
+    self.HDILButton.enabled = false
+    self.chooseImageButton.enabled = false
+    self.chooseFromPreviousImagesButton.enabled = false
+    let data = UIImageJPEGRepresentation(image, 0.8)
     DataService.returnImageAnalysisDataUsingData(data) { (result) in
       if result == "male" {
         self.presentPictureReslts("You need a shave", resultDescription: "Make sure to shave before heading out")
@@ -77,7 +96,10 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
       } else {
         self.presentPictureReslts("Something went wrong", resultDescription: result)
       }
-    self.activityIndicator.stopAnimating()
+      self.activityIndicator.stopAnimating()
+      self.HDILButton.enabled = true
+      self.chooseFromPreviousImagesButton.enabled = true
+      self.chooseImageButton.enabled = true
     }
     self.HDILButton.setTitle("Try Again", forState: .Normal)
     self.chooseImageButton.setTitle("Choose from Camera Roll", forState: .Normal)
@@ -103,24 +125,38 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
       fatalError("Failure to save context: \(error)")
     }
     moc?.refreshAllObjects()
+    self.loadImages()
   }
   
   func loadImages() {
     let fetchRequest = NSFetchRequest(entityName: "Picture")
 
     do {
-      let results = try self.moc!.executeFetchRequest(fetchRequest)
+      let results = try self.moc!.executeFetchRequest(fetchRequest) as! [Picture]
       if results.count > 0 {
         self.chooseFromPreviousImagesButton.hidden = false
         self.chooseFromPreviousImagesButton.enabled = true
+        self.pictures = NSMutableArray()
+        for picture : Picture in results {
+          self.pictures?.addObject(picture)
+        }
       }
-      print(results.count)
-//      let imageData = results.first!.binary
-//      let newImage = UIImage(data: imageData!!)
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
       return
     }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "savedPictures" {
+      let destVC = segue.destinationViewController as! SavedPicturesVC
+      destVC.pictures = self.pictures
+      
+    }
+  }
+  
+  @IBAction func unwindToThisViewController(segue: UIStoryboardSegue) {
+    
   }
   
    
