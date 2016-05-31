@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D1897C57356BB664AC0F2B85 /* libPods-HDIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E98BB0539DB3C90A001E591 /* libPods-HDIL.a */; };
 		D8960A951CF89C14004ADAC7 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = D8960A941CF89C14004ADAC7 /* DataService.m */; };
+		D8BCB3431CFD2A9100AE8495 /* Picture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB33F1CFD2A9100AE8495 /* Picture+CoreDataProperties.m */; };
+		D8BCB3441CFD2A9100AE8495 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BCB3411CFD2A9100AE8495 /* Picture.m */; };
 		D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */; };
 		D8D110801CF78C6800FDA226 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D1107E1CF78C6800FDA226 /* Main.storyboard */; };
 		D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */; };
@@ -24,6 +26,10 @@
 		D8960A921CF89C14004ADAC7 /* HDIL-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HDIL-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8960A931CF89C14004ADAC7 /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
 		D8960A941CF89C14004ADAC7 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		D8BCB33E1CFD2A9100AE8495 /* Picture+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Picture+CoreDataProperties.h"; sourceTree = "<group>"; };
+		D8BCB33F1CFD2A9100AE8495 /* Picture+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Picture+CoreDataProperties.m"; sourceTree = "<group>"; };
+		D8BCB3401CFD2A9100AE8495 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		D8BCB3411CFD2A9100AE8495 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		D8D110771CF78C6800FDA226 /* HDIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HDIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D1107F1CF78C6800FDA226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +78,18 @@
 			name = "Data Service";
 			sourceTree = "<group>";
 		};
+		D8BCB3421CFD2A9100AE8495 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8BCB33E1CFD2A9100AE8495 /* Picture+CoreDataProperties.h */,
+				D8BCB33F1CFD2A9100AE8495 /* Picture+CoreDataProperties.m */,
+				D8BCB3401CFD2A9100AE8495 /* Picture.h */,
+				D8BCB3411CFD2A9100AE8495 /* Picture.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D8D1106E1CF78C6800FDA226 = {
 			isa = PBXGroup;
 			children = (
@@ -93,24 +111,17 @@
 		D8D110791CF78C6800FDA226 /* HDIL */ = {
 			isa = PBXGroup;
 			children = (
+				D8BCB3421CFD2A9100AE8495 /* Model */,
 				D8D1107A1CF78C6800FDA226 /* AppDelegate.swift */,
 				D8960A921CF89C14004ADAC7 /* HDIL-Bridging-Header.h */,
 				D8960A961CF89C60004ADAC7 /* Data Service */,
 				D8D110911CF78C8500FDA226 /* Controller */,
 				D8D110901CF78C7F00FDA226 /* View */,
-				D8D1108F1CF78C7900FDA226 /* Model */,
 				D8D110841CF78C6800FDA226 /* Assets.xcassets */,
 				D8D110891CF78C6800FDA226 /* Info.plist */,
 				D8D110811CF78C6800FDA226 /* HDIL.xcdatamodeld */,
 			);
 			path = HDIL;
-			sourceTree = "<group>";
-		};
-		D8D1108F1CF78C7900FDA226 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		D8D110901CF78C7F00FDA226 /* View */ = {
@@ -252,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BCB3441CFD2A9100AE8495 /* Picture.m in Sources */,
 				D8D110931CF78CEF00FDA226 /* HomeVC.swift in Sources */,
+				D8BCB3431CFD2A9100AE8495 /* Picture+CoreDataProperties.m in Sources */,
 				D8D1107B1CF78C6800FDA226 /* AppDelegate.swift in Sources */,
 				D8D110831CF78C6800FDA226 /* HDIL.xcdatamodeld in Sources */,
 				D8960A951CF89C14004ADAC7 /* DataService.m in Sources */,

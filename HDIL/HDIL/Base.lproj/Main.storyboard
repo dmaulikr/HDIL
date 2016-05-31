@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--How Do I Look?-->
@@ -52,13 +53,22 @@
                                     <constraint firstAttribute="height" constant="20" id="idm-U8-KI8"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DU8-Jz-rYs">
+                                <rect key="frame" x="0.0" y="474" width="102" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="CYc-fn-QV5"/>
+                                    <constraint firstAttribute="height" constant="128" id="Dob-NU-WCU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rgv-IC-lfQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Xy-xh-Gln"/>
                             <constraint firstItem="JIf-ah-k8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NN1-ch-ZNP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DU8-Jz-rYs" secondAttribute="bottom" constant="-2" id="ZBO-4T-T2o"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rgv-IC-lfQ" secondAttribute="bottom" constant="9" id="cnq-Ik-9zZ"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h9d-Xz-hfo"/>
+                            <constraint firstItem="DU8-Jz-rYs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hDf-Mf-hcK"/>
                             <constraint firstItem="2cp-yr-wYd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="lsB-JC-xim"/>
                             <constraint firstItem="S80-Ap-e6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhP-bl-kk1"/>
                             <constraint firstItem="S80-Ap-e6o" firstAttribute="top" secondItem="2cp-yr-wYd" secondAttribute="bottom" constant="55" id="pGX-jN-pu3"/>
@@ -75,6 +85,7 @@
                         <outlet property="chooseImageButton" destination="Rgv-IC-lfQ" id="DAc-ox-Vec"/>
                         <outlet property="imageView" destination="2cp-yr-wYd" id="SBF-FX-sm1"/>
                         <outlet property="refreshButton" destination="AvR-Af-Wi6" id="1tF-ne-YGC"/>
+                        <outlet property="testImage" destination="DU8-Jz-rYs" id="xvj-2v-aYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

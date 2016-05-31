@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -17,13 +18,23 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
   
   @IBOutlet var activityIndicator: UIActivityIndicatorView!
   @IBOutlet var chooseImageButton: UIButton!
+  
+  @IBOutlet var testImage: UIImageView!
+  
+  
   var imagePicker : UIImagePickerController!
+  var moc : NSManagedObjectContext?
+  
+  
   
   override func viewDidLoad() {
     self.refreshButton.enabled = false
     self.refreshButton.tintColor = UIColor.clearColor()
     self.activityIndicator.hidesWhenStopped = true
     self.activityIndicator.hidden = true
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    self.moc = appDelegate.managedObjectContext;
+    self.loadImages()
   }
   
  
@@ -52,7 +63,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     self.activityIndicator.hidden = false
     self.activityIndicator.startAnimating()
     picker.dismissViewControllerAnimated(true, completion: nil)
-    imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    imageView.image = image
+    self.saveImage(image!)
     let data = UIImageJPEGRepresentation((info[UIImagePickerControllerOriginalImage] as? UIImage)!, 0.8)
     DataService.returnImageAnalysisDataUsingData(data) { (result) in
       if result == "male" {
@@ -82,15 +95,35 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     }
   }
   
+  func saveImage(image : UIImage){
+    let picture = NSEntityDescription.insertNewObjectForEntityForName("Picture", inManagedObjectContext: self.moc!) as! Picture
+    let imageData = UIImageJPEGRepresentation(image, 1)
+    picture.binary = imageData
+    do {
+      try self.moc?.save()
+    } catch {
+      fatalError("Failure to save context: \(error)")
+    }
+    
+    moc?.refreshAllObjects()
+  }
   
-//bridge works
-//  let ref = DataService.checkingBridge(string as String)
-//  if ref == true {
-//  print("true")
-//  } else {
-//  print("false")
-//  }
+  func loadImages() {
+    let fetchRequest = NSFetchRequest(entityName: "Picture")
+
+    do {
+      let results = try self.moc!.executeFetchRequest(fetchRequest)
+      print(results.count)
+      let imageData = results.first!.binary
+      let newImage = UIImage(data: imageData!!)
+      self.testImage.image = newImage
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+      return
+    }
+  }
   
+   
   
   
 }

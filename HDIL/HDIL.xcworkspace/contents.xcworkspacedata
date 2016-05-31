@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Model">
+      <FileRef
+         location = "group:Picture+CoreDataProperties.h">
+      </FileRef>
+      <FileRef
+         location = "group:Picture+CoreDataProperties.m">
+      </FileRef>
+      <FileRef
+         location = "group:Picture.h">
+      </FileRef>
+      <FileRef
+         location = "group:Picture.m">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:HDIL.xcodeproj">
    </FileRef>
